@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Espace Membre en HTML, CSS et Vanilla JS</title>
+
+    <!-- LINKS CSS STYLESHEETS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="form">
+        <div>
+            <ul>
+                <li id="signup_btn" data-form="form-login" class="active" onclick="hideForm('form-login')"><a href="#"> Sign up </a></li>
+                <li id="login_btn" data-form="form-signin" onclick="hideForm('form-signin')"><a href="#"> Log In </a></li>
+            </ul>
+            <!-- Form Sign In -->
+            <div class="form-signin" id="form-signin">
+                <form>
+                    <div>
+                        <div class="form-group">
+                            <label for="lastname"> Nom </label><br>
+                            <input type="text" name="lastname" id="lastname">
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname"> Prénom </label><br>
+                            <input type="text" name="firstname" id="firstname">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username"> Votre nom d'utilisateur </label><br>
+                        <input type="text" name="username" id="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password"> Votre mot de passe </label><br>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary" onclick="signin()"> S'inscrire </button>
+                    </div>
+                </form>
+                <p class="message-signin"></p>
+            </div>
+            <div class="form-login" id="form-login">
+                <form>
+                    <div class="form-group">
+                        <label for="username_log"> Nom d'utilisateur </label><br>
+                        <input type="text" name="username_log" id="username_log">
+                    </div>
+                    <div class="form-group">
+                        <label for="password_log"> Mot de passe </label><br>
+                        <input type="password" name="password_log" id="password_log">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary" onclick="login()"> Se connecter </button>
+                    </div>
+                </form>
+                <p class="message-login"></p>
+            </div>
+        </div>
+
+    </div>
+    <!-- Formulaire -->
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
+</body>
+</html>
