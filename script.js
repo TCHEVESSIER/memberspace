@@ -124,7 +124,7 @@ function signin() {
             if (lastnameInput && firstnameInput && usernameInput && passwordInput) {
                 if (checkAlreadySignUp(tabUser, usernameInput) == 1) {
                     document.querySelector('.message-signin').style.color = "red";
-                    document.querySelector('.message-signin').innerHTML = 'Pseudo fdp';
+                    document.querySelector('.message-signin').innerHTML = 'Cet username existe déja';
                 } else {
                     user = new User(lastnameInput, firstnameInput, usernameInput, passwordInput); // Create a new user with all fields value at the top
                     tabUser.push(user);
